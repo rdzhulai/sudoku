@@ -1,0 +1,14 @@
+/home/rdz/Code/csharp/c2-sudoku/sudoku/bin/Debug/net6.0/sudoku
+/home/rdz/Code/csharp/c2-sudoku/sudoku/bin/Debug/net6.0/sudoku.deps.json
+/home/rdz/Code/csharp/c2-sudoku/sudoku/bin/Debug/net6.0/sudoku.runtimeconfig.json
+/home/rdz/Code/csharp/c2-sudoku/sudoku/bin/Debug/net6.0/sudoku.dll
+/home/rdz/Code/csharp/c2-sudoku/sudoku/bin/Debug/net6.0/sudoku.pdb
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.GeneratedMSBuildEditorConfig.editorconfig
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.AssemblyInfoInputs.cache
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.AssemblyInfo.cs
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.csproj.CoreCompileInputs.cache
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.dll
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/refint/sudoku.dll
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.pdb
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/sudoku.genruntimeconfig.cache
+/home/rdz/Code/csharp/c2-sudoku/sudoku/obj/Debug/net6.0/ref/sudoku.dll
