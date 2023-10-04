@@ -9,26 +9,24 @@ namespace Lab02
         private const int COLS = 9;
         private const int SUBROWS = 3;
         private const int SUBCOLS = 3;
-
-        private static T[,] Make2DArray<T>(T[] input, int height, int width)
+        public char[,] LoadSudoku(string problem)
         {
-            T[,] output = new T[height, width];
-            for (int i = 0; i < height; i++)
+            char[,] grid = new char[ROWS, COLS];
+
+            for (int curRow = 0; curRow < ROWS; ++curRow)
             {
-                for (int j = 0; j < width; j++)
+                for (int curCol = 0; curCol < COLS; ++curCol)
                 {
-                    output[i, j] = input[i * width + j];
+                    grid[curRow, curCol] = problem[curRow * ROWS + curCol];
+                    if (grid[curRow, curCol] == '0')
+                        grid[curRow, curCol] = '.';
                 }
             }
-            return output;
+
+            return grid;
         }
 
-        static char[,] LoadSudoku(string problem)
-        {
-            return Make2DArray(problem.ToCharArray(), ROWS, COLS);
-        }
-
-        static void PrintSudoku(char[,] grid)
+        public void PrintSudoku(char[,] grid)
         {
             for (int curRow = 0; curRow < ROWS; curRow++)
             {
@@ -57,22 +55,48 @@ namespace Lab02
             Console.WriteLine(new string('-', COLS * 2 + 4));
         }
 
-        static bool IsValid(char[,] grid, int row, int col, char value)
+        public bool IsValid(char[,] grid, int row, int col, char value)
         {
+            if (grid[row, col] != 0)
+                return false;
+
+            for (int curRow = 0; curRow < row; ++curRow)
+            {
+                if (grid[curRow, col] == value)
+                    return false;
+            }
+
+            for (int curCol = 0; curCol < col; ++col)
+            {
+                if (grid[row, curCol] == value)
+                    return false;
+            }
+
+            for (int curRow = row - row % SUBROWS, endRow = curRow + SUBROWS; curRow < endRow; ++curRow)
+            {
+                for (int curCol = col - col % SUBCOLS, endCol = curCol + SUBCOLS; curCol < endCol; ++curCol)
+                {
+                    if (grid[curRow, curCol] == value)
+                        return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool SolveSudoku(char[,] grid)
+        {
+
+
             return false;
         }
 
-        static bool SolveSudoku(char[,] grid)
-        {
-            return false;
-        }
-
-        static void FillSure(char[,] grid)
+        public void FillSure(char[,] grid)
         {
 
         }
 
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
             string example1 = "632005400004001300000000567000273005021406080000510000060030900048050002100029800";
 

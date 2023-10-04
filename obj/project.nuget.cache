@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/s2itw+fOkTg4xQulwMtmbfI8GDRd1gu6CfVWqh9FsppgGIZfQCXFGULVL4a5Uhb9D4/8xSU1ogfhFIQ60PS9w==",
+  "dgSpecHash": "/ue03Pdsqq9mztp8AXtlCR2+k55d1ydJieVmTRLs3XPVJVxvxgbZZypas5uU7I1HR6T4/ofdp4A+yphtbvwy6g==",
   "success": true,
-  "projectFilePath": "/home/rdz/Code/csharp/c2-sudoku/sudoku/sudoku.csproj",
+  "projectFilePath": "C:\\Users\\jmagy\\source\\repos\\Lab02\\Lab02\\Lab02.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
