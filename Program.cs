@@ -42,11 +42,7 @@ namespace Lab02
                         Console.Write('|');
                     }
 
-                    int n = grid[curRow, curCol] - '0';
-                    if (n == 0)
-                        Console.Write(" .");
-                    else
-                        Console.Write($" {n}");
+                    Console.Write(' ' + grid[curRow, curCol]);
                 }
 
                 Console.WriteLine('|');
