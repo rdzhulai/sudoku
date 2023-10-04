@@ -5,11 +5,12 @@ namespace Lab02
 {
     internal class Program
     {
+
         private const int ROWS = 9;
         private const int COLS = 9;
         private const int SUBROWS = 3;
         private const int SUBCOLS = 3;
-        public char[,] LoadSudoku(string problem)
+        static char[,] LoadSudoku(string problem)
         {
             char[,] grid = new char[ROWS, COLS];
 
@@ -26,7 +27,7 @@ namespace Lab02
             return grid;
         }
 
-        public void PrintSudoku(char[,] grid)
+        static void PrintSudoku(char[,] grid)
         {
             for (int curRow = 0; curRow < ROWS; curRow++)
             {
@@ -42,7 +43,7 @@ namespace Lab02
                         Console.Write('|');
                     }
 
-                    Console.Write(' ' + grid[curRow, curCol]);
+                    Console.Write(" " + grid[curRow, curCol]);
                 }
 
                 Console.WriteLine('|');
@@ -51,7 +52,7 @@ namespace Lab02
             Console.WriteLine(new string('-', COLS * 2 + 4));
         }
 
-        public bool IsValid(char[,] grid, int row, int col, char value)
+        static bool IsValid(char[,] grid, int row, int col, char value)
         {
             if (grid[row, col] != 0)
                 return false;
@@ -80,19 +81,17 @@ namespace Lab02
             return true;
         }
 
-        public bool SolveSudoku(char[,] grid)
+        static bool SolveSudoku(char[,] grid)
         {
-
-
             return false;
         }
 
-        public void FillSure(char[,] grid)
+        static void FillSure(char[,] grid)
         {
 
         }
 
-        public void Main(string[] args)
+        static void Main(string[] args)
         {
             string example1 = "632005400004001300000000567000273005021406080000510000060030900048050002100029800";
 
@@ -101,7 +100,7 @@ namespace Lab02
 
             Console.WriteLine("\n\n\n");
 
-            //SolveSudoku(grid);
+            // SolveSudoku(grid);
             PrintSudoku(grid);
         }
     }
