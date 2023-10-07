@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
-namespace Lab02
+﻿namespace Lab02
 {
     internal class Program
     {
@@ -89,26 +86,14 @@ namespace Lab02
                 {
                     if (grid[i, j] == '.')
                     {
-                        // foreach (char ps in GetPossibleSolutions(grid, i, j))
-                        // {
-                        //     grid[i, j] = ps;
-                        //     if (SolveSudoku(grid))
-                        //     {
-                        //         return true;
-                        //     }
-                        //     grid[i, j] = '.';
-                        // }
-                        for (char k = '1'; k <= '9'; k++)
+                        foreach (char ps in GetPossibleSolutions(grid, i, j))
                         {
-                            if (IsValid(grid, i, j, k))
+                            grid[i, j] = ps;
+                            if (SolveSudoku(grid))
                             {
-                                grid[i, j] = k;
-                                if (SolveSudoku(grid))
-                                {
-                                    return true;
-                                }
-                                grid[i, j] = '.';
+                                return true;
                             }
+                            grid[i, j] = '.';
                         }
                         return false;
                     }
@@ -190,21 +175,20 @@ namespace Lab02
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Unoptimized SolveSudoku");
             foreach (string example in args)
             {
-                string example1 = "632005400004001300000000567000273005021406080000510000060030900048050002100029800";
+                // string example1 = "632005400004001300000000567000273005021406080000510000060030900048050002100029800";
 
-                char[,] grid = LoadSudoku(example1);
+                char[,] grid = LoadSudoku(example);
                 // PrintSudoku(grid);
-                // Console.WriteLine("\n");
 
-                // FillSure(grid);
-                SolveSudoku(grid);
+                FillSure(grid);
+                // SolveSudoku(grid);
 
                 PrintSudoku(grid);
                 Console.WriteLine("\n\n\n");
             }
+
         }
     }
 }
